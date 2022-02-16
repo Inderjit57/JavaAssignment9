@@ -4,7 +4,7 @@ public class OnlineBanking extends BankingRules implements StandardProcess {
 
 	private double interestRate;
 	private double moneyInvest;
-	private String userIDOnline;
+	private String userIdOnline;
 
 	public double fundTransfer(boolean transferFund) {
 		return 0;
@@ -28,13 +28,14 @@ public class OnlineBanking extends BankingRules implements StandardProcess {
 	}
 
 	@Override
-	String userIdentification() {
+	String userIdentification(String userId, String password) {
 		// USER ID for online banking can be anything to login. and can be changed
-		return userIDOnline;
+		userIdOnline = userId;
+		return userIdOnline;
 	}
 
-	public void setUserIDOnline(String userIDOnline) {
-		this.userIDOnline = userIDOnline;
+	public void setUserIDOnline(String userIdOnline) {
+		this.userIdOnline = userIdOnline;
 	}
 
 }

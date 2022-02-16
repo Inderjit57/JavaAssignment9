@@ -5,7 +5,7 @@ public class Atm extends BankingRules implements StandardProcess {
 	private double balance;
 	private double balanceDeposit;
 	private double balanceWithdraw;
-	private String userIDAtm;
+	private String userIdAtm;
 	public double checkingAcc;
 	public double savingAcc;
 	public boolean transferFund;
@@ -23,9 +23,10 @@ public class Atm extends BankingRules implements StandardProcess {
 	}
 
 	@Override
-	public String userIdentification() {
+	public String userIdentification(String userIdAtm, String password) {
 		// User ID for ATM is 8 digit CARD NUMBER
-		return userIDAtm;
+		this.userIdAtm = userIdAtm;
+		return userIdAtm;
 	}
 
 	@Override

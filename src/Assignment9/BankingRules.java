@@ -2,7 +2,7 @@ package Assignment9;
 
 public abstract class BankingRules {
 
-	abstract String userIdentification();
+	abstract String userIdentification(String userId, String password);
 
 	private double dailyWithdrawLimit;
 	private int noOfTransactionLimit;
